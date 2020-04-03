@@ -17,7 +17,6 @@ class Flitter:
         :return: nothing
         :rtype: void
         """
-
         self.message_store.add(Message(author=author, text=message))
 
     def get_feed_for(self, user):

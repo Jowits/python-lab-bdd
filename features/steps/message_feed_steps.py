@@ -13,7 +13,7 @@ def follow(context, follower, followee):
 
 @given('{follower} is not following {followee}')
 def do_not_follow(context, follower, followee):
-    pass  # Do nothing
+    pass
 
 
 @when('{user} views their feed')

@@ -13,7 +13,6 @@ Feature: Posting messages
     And they can see the message "It's a lovely day today" by Alice
 
   # Rule: Users see messages written by people they follow
-
   Scenario: The user doesn't see message from people they're not following
     Given Bob has posted a message "Bob here"
     And Alice is not following Bob
