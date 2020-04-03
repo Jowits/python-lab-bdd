@@ -45,7 +45,6 @@ class Flitter:
         :return: nothing
         :rtype: void
         """
-
         self.follow_store.add(follower=follower, followee=followee)
 
     def _fetch_messages_by_user(self, user):
