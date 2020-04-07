@@ -9,6 +9,7 @@ def message_store():
     return InMemoryMessageStore()
 
 
+
 def test_fetch_by_returns_a_list(message_store):
     assert type(message_store.fetch_by('bob')) is list
 
@@ -32,3 +33,16 @@ def test_fetch_by_does_not_return_message_by_other_users(message_store):
     messages = message_store.fetch_by('alice')
 
     assert message not in messages
+
+
+def test_fetch_by_mention(message_store):
+    message1 = Message(author='alice', text='hi @bob')
+    message_store.add(message1)
+    
+    messages = message_store.fetch_by_mention('bob')
+    assert message1 in messages, f"This is the message: {messages}"
+    
+
+
+def test_message_in_feed(message_store):
+    pass
